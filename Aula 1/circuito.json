@@ -1,0 +1,50 @@
+{
+    "version": 1,
+    "author": "Lucas Rodrigues Delfino",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "wokwi-breadboard-half", "id": "bb1", "top": -147, "left": -6.8, "attrs": {} },
+      { "type": "wokwi-arduino-uno", "id": "uno", "top": 96.6, "left": 28.2, "attrs": {} },
+      { "type": "wokwi-dht22", "id": "dht1", "top": -143.7, "left": 4.2, "attrs": {} },
+      { "type": "wokwi-hc-sr04", "id": "ultrasonic1", "top": -104.1, "left": 53.5, "attrs": {} },
+      {
+        "type": "wokwi-photoresistor-sensor",
+        "id": "ldr1",
+        "top": -134.7,
+        "left": 176.9,
+        "rotate": 90,
+        "attrs": {}
+      },
+      { "type": "wokwi-servo", "id": "servo1", "top": -21.2, "left": 403.2, "attrs": {} }
+    ],
+    "connections": [
+      [ "uno:5V", "bb1:bp.1", "red", [ "v38.3", "h-207.4", "v-278.4" ] ],
+      [ "bb1:1b.g", "bb1:bp.3", "red", [ "v38.4", "h28.8" ] ],
+      [ "bb1:4b.g", "bb1:bn.5", "black", [ "v48", "h19.2" ] ],
+      [ "bb1:2b.g", "uno:2", "blue", [ "v96", "h230.4" ] ],
+      [ "uno:GND.1", "bb1:bn.6", "black", [ "v-38.4", "h-57.3" ] ],
+      [ "bb1:12b.j", "bb1:bp.10", "red", [ "v0" ] ],
+      [ "bb1:15b.j", "bb1:bn.12", "black", [ "v0" ] ],
+      [ "bb1:13b.j", "uno:7", "violet", [ "v57.6", "h86.4" ] ],
+      [ "bb1:14b.j", "uno:8", "purple", [ "v76.8", "h57.6" ] ],
+      [ "bb1:28b.i", "bb1:bp.23", "red", [ "v0" ] ],
+      [ "bb1:27b.i", "bb1:bn.22", "black", [ "v0" ] ],
+      [ "bb1:25b.j", "uno:A0", "gold", [ "v57.6", "h76.8", "v259.2", "h-90.2" ] ],
+      [ "servo1:GND", "bb1:bn.25", "black", [ "h-67.2", "v19.2" ] ],
+      [ "servo1:V+", "bb1:bp.25", "red", [ "h0" ] ],
+      [ "servo1:PWM", "uno:9", "orange", [ "h-48", "v38.6", "h-164" ] ],
+      [ "dht1:VCC", "bb1:1b.f", "", [ "$bb" ] ],
+      [ "dht1:SDA", "bb1:2b.f", "", [ "$bb" ] ],
+      [ "dht1:NC", "bb1:3b.f", "", [ "$bb" ] ],
+      [ "dht1:GND", "bb1:4b.f", "", [ "$bb" ] ],
+      [ "ultrasonic1:VCC", "bb1:12b.h", "", [ "$bb" ] ],
+      [ "ultrasonic1:TRIG", "bb1:13b.h", "", [ "$bb" ] ],
+      [ "ultrasonic1:ECHO", "bb1:14b.h", "", [ "$bb" ] ],
+      [ "ultrasonic1:GND", "bb1:15b.h", "", [ "$bb" ] ],
+      [ "ldr1:VCC", "bb1:28b.g", "", [ "$bb" ] ],
+      [ "ldr1:GND", "bb1:27b.g", "", [ "$bb" ] ],
+      [ "ldr1:DO", "bb1:26b.g", "", [ "$bb" ] ],
+      [ "ldr1:AO", "bb1:25b.g", "", [ "$bb" ] ]
+    ],
+    "dependencies": {}
+  }
