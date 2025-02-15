@@ -1,3 +1,3 @@
-# Aula sobre sensores ultrassônico, ldr e servo motor
+# Aula sobre sensores: ultrassônico e ldr, servo motor e serialização de json
 
 ![alt text](image.png)
